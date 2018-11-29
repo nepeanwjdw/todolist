@@ -4,15 +4,11 @@ describe("TodoList", function() {
 
   beforeEach(function() {
     todoList = new TodoList();
-    todo = new Todo();
-  })
-
-  it("should display a list of todos", function() {
-    expect(todoList.list).to
+    todo = new Todo("Go to Gym");
   })
 
   it("should allow a new todo to be created", function() {
     todoList.add(todo);
-    expect(todoList.list).toEqual(todo);
+    expect(todoList.todos).toEqual([todo.name]);
   })
 })
