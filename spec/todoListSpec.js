@@ -19,4 +19,9 @@ describe("TodoList", function() {
     todoList.delete(todo);
     expect(todoList.todos).toEqual([todo1]);
   })
+  it("should be able to see if a todo is completed", function() {
+    expect(todo.isCompleted).toEqual(false);
+    todo.toggleCompleted();
+    expect(todo.isCompleted).toEqual(true);
+  })
 })
